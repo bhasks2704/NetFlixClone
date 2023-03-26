@@ -102,9 +102,12 @@ nav button {
 .features {
   padding: 50px 12%;
   font-size: 22px;
-  border-top:10px solid #353434;
+  /* border-top: 10px solid #353434; */
 }
 
+section {
+  border-top: 5px solid #10e210;
+}
 .row {
   display: flex;
   /* width: 100%; */
@@ -129,8 +132,74 @@ nav button {
   margin: auto;
 }
 
-.features h2{
-    font-size:50px;
-    margin-bottom:20px;
-    font-weight:600;
+.features h2 {
+  font-size: 50px;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+.question h1 {
+  text-align: center;
+  font-size: 40px;
+  font-weight: 800;
+}
+
+.accordion {
+  margin: 100px auto;
+  width: 500px;
+  display: block;
+  align-items: center;
+  justify-content: center;
+}
+
+.accordion_title {
+  font-family: "Times New Roman", Times, serif;
+  width: 100%;
+  margin-bottom: 10px;
+  background-color: #fff;
+  color: #000;
+  padding: 10px;
+  border-radius: 3px;
+  /* border-bottom: 5px solid black; */
+}
+
+.accordiontitle label {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* text-align: center; */
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.7);
+  justify-content: space-between;
+  font-size: 18px;
+  font-weight: 500;
+  background-color: rgb(177, 15, 241);
+  cursor: pointer;
+  border-bottom: 5px solid black;
+}
+.accordiontitle label span {
+  /* transform: rotate(45deg); */
+  font-size: 38px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.accordion label + input[type="radio"] {
+  display: none;
+}
+
+.accordiontitle .accordion_content {
+  padding: 0px 30px;
+  background-color: rgb(241, 237, 237);
+  color: #000;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.3s;
+}
+
+.accordiontitle label + input[type="radio"]:checked + .accordion_content {
+  max-height: 400px;
+}
+
+input:checked ~ .label::after {
+  background-color: red;
 }
